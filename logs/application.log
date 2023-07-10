@@ -1,0 +1,1136 @@
+[INFO ] [2023-07-09T14:55:26,607] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T14:55:26,717] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 17188 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T14:55:26,729] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T14:55:28,779] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T14:55:28,816] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T14:55:30,182] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T14:55:30,217] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T14:55:30,218] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T14:55:30,220] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T14:55:30,221] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T14:55:30,482] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T14:55:30,482] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 3622 ms 
+[INFO ] [2023-07-09T14:55:30,909] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T14:55:31,623] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T14:55:31,681] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T14:55:31,683] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T14:55:31,705] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T14:55:32,102] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.125s) 
+[INFO ] [2023-07-09T14:55:32,126] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T14:55:32,130] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T14:55:33,726] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T14:55:33,788] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T14:55:33,812] [main] [Application] Started Application in 7.991 seconds (JVM running for 10.583) 
+[INFO ] [2023-07-09T14:56:56,854] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T14:56:56,855] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T14:56:56,857] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 2 ms 
+[ERROR] [2023-07-09T14:57:02,585] [http-nio-8080-exec-3] [[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0] with root cause 
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:97) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:880) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl.getByName(HeroRepositoryImpl.java:38) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl$$FastClassBySpringCGLIB$$b1fab632.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl$$EnhancerBySpringCGLIB$$a5544590.getByName(<generated>) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroServiceImpl.getByName(HeroServiceImpl.java:28) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.HeroController.getHeroByName(HeroController.java:42) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[INFO ] [2023-07-09T14:58:06,158] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T14:58:06,172] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T14:58:22,785] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T14:58:22,878] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 13064 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T14:58:22,892] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T14:58:24,255] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T14:58:24,272] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T14:58:25,414] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T14:58:25,443] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T14:58:25,444] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T14:58:25,446] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T14:58:25,448] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T14:58:25,743] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T14:58:25,743] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 2732 ms 
+[INFO ] [2023-07-09T14:58:26,225] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T14:58:26,790] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T14:58:26,842] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T14:58:26,844] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T14:58:26,868] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T14:58:27,191] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.085s) 
+[INFO ] [2023-07-09T14:58:27,218] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T14:58:27,220] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T14:58:28,850] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T14:58:28,928] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T14:58:28,950] [main] [Application] Started Application in 6.859 seconds (JVM running for 9.055) 
+[INFO ] [2023-07-09T14:58:37,754] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T14:58:37,754] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T14:58:37,756] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 2 ms 
+[INFO ] [2023-07-09T14:59:26,139] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T14:59:26,153] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T15:43:19,905] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T15:43:20,343] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 15176 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T15:43:20,383] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T15:43:26,898] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T15:43:27,002] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 70 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T15:43:32,132] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T15:43:32,290] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T15:43:32,293] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T15:43:32,299] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T15:43:32,303] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T15:43:33,184] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T15:43:33,187] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 12369 ms 
+[INFO ] [2023-07-09T15:43:34,823] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T15:43:36,679] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T15:43:36,851] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T15:43:36,863] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T15:43:36,975] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T15:43:38,326] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.282s) 
+[INFO ] [2023-07-09T15:43:38,389] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T15:43:38,394] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T15:43:46,488] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T15:43:46,724] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T15:43:46,940] [main] [Application] Started Application in 30.026 seconds (JVM running for 37.973) 
+[INFO ] [2023-07-09T15:44:19,923] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T15:44:19,924] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T15:44:19,926] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 2 ms 
+[INFO ] [2023-07-09T15:50:31,489] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T15:50:31,568] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T15:58:00,183] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T15:58:00,537] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 9256 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T15:58:00,577] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T15:58:13,469] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T15:58:13,570] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 71 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T15:58:18,674] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T15:58:18,817] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T15:58:18,819] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T15:58:18,824] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T15:58:18,826] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T15:58:19,820] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T15:58:19,822] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 18743 ms 
+[INFO ] [2023-07-09T15:58:23,229] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T15:58:25,484] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T15:58:25,621] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T15:58:25,628] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T15:58:25,808] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T15:58:27,412] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.367s) 
+[INFO ] [2023-07-09T15:58:27,464] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T15:58:27,470] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T15:58:36,673] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T15:58:37,046] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T15:58:37,629] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T15:58:37,812] [main] [Application] Started Application in 40.498 seconds (JVM running for 49.969) 
+[INFO ] [2023-07-09T15:58:49,525] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T15:58:49,539] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T15:58:49,551] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 8 ms 
+[INFO ] [2023-07-09T15:59:07,440] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T15:59:07,466] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T16:00:11,123] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T16:00:11,535] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 10788 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T16:00:11,597] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T16:00:21,078] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T16:00:21,180] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 68 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T16:00:26,524] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T16:00:26,642] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T16:00:26,645] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T16:00:26,651] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T16:00:26,653] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T16:00:27,823] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T16:00:27,826] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15742 ms 
+[INFO ] [2023-07-09T16:00:31,832] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T16:00:34,513] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T16:00:34,723] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T16:00:34,764] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T16:00:34,882] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T16:00:36,712] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.426s) 
+[INFO ] [2023-07-09T16:00:36,867] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T16:00:36,873] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T16:00:47,495] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T16:00:47,824] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T16:00:48,154] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T16:00:48,535] [main] [Application] Started Application in 40.12 seconds (JVM running for 48.567) 
+[INFO ] [2023-07-09T16:01:13,690] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T16:01:13,691] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T16:01:13,696] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 4 ms 
+[INFO ] [2023-07-09T16:03:16,373] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T16:03:16,406] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T17:19:20,505] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T17:19:20,883] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 16752 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T17:19:20,932] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T17:19:32,516] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T17:19:32,621] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 73 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T17:19:38,035] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T17:19:38,169] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T17:19:38,172] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:19:38,177] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T17:19:38,180] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T17:19:39,176] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T17:19:39,178] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 17784 ms 
+[INFO ] [2023-07-09T17:19:43,469] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T17:19:45,517] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T17:19:45,663] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T17:19:45,672] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T17:19:45,769] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T17:19:47,780] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.429s) 
+[INFO ] [2023-07-09T17:19:47,856] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T17:19:47,861] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T17:19:58,335] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T17:19:58,494] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:19:58,749] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T17:19:58,884] [main] [Application] Started Application in 41.542 seconds (JVM running for 50.937) 
+[INFO ] [2023-07-09T17:20:06,368] [http-nio-8080-exec-3] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:20:06,371] [http-nio-8080-exec-3] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:20:06,377] [http-nio-8080-exec-3] [DispatcherServlet] Completed initialization in 5 ms 
+[INFO ] [2023-07-09T17:22:50,984] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T17:22:51,079] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T17:24:25,480] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T17:24:25,938] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 11996 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T17:24:26,033] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T17:24:36,499] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T17:24:36,606] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 74 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T17:24:42,956] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T17:24:43,109] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T17:24:43,111] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:24:43,117] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T17:24:43,120] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T17:24:44,216] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T17:24:44,218] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 17601 ms 
+[INFO ] [2023-07-09T17:24:49,098] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T17:24:51,993] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T17:24:52,134] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T17:24:52,140] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T17:24:52,262] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T17:24:54,640] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.418s) 
+[INFO ] [2023-07-09T17:24:54,749] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T17:24:54,753] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[WARN ] [2023-07-09T17:24:55,918] [main] [AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroController': Unsatisfied dependency expressed through field 'heroService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroServiceImpl' defined in file [D:\Work\Testes\interview-pleno\core\target\classes\br\com\gubee\interview\core\features\hero\impl\HeroServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.com.gubee.interview.core.features.powerstats.PowerStatsRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+[INFO ] [2023-07-09T17:24:55,927] [main] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T17:24:56,097] [main] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T17:24:56,179] [main] [StandardService] Stopping service [Tomcat] 
+[INFO ] [2023-07-09T17:24:56,323] [main] [ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+[ERROR] [2023-07-09T17:24:56,605] [main] [LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in br.com.gubee.interview.core.features.hero.impl.HeroServiceImpl required a bean of type 'br.com.gubee.interview.core.features.powerstats.PowerStatsRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'br.com.gubee.interview.core.features.powerstats.PowerStatsRepository' in your configuration.
+ 
+[INFO ] [2023-07-09T17:26:03,014] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T17:26:03,515] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 12712 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T17:26:03,604] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T17:26:13,195] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T17:26:13,292] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 66 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T17:26:19,481] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T17:26:19,620] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T17:26:19,622] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:26:19,628] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T17:26:19,630] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T17:26:21,206] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T17:26:21,210] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 17084 ms 
+[INFO ] [2023-07-09T17:26:26,940] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T17:26:29,892] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T17:26:30,046] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T17:26:30,050] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T17:26:30,150] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T17:26:31,892] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.300s) 
+[INFO ] [2023-07-09T17:26:31,956] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T17:26:31,961] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T17:26:45,981] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T17:26:46,331] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:26:46,741] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T17:26:47,012] [main] [Application] Started Application in 47.16 seconds (JVM running for 56.858) 
+[INFO ] [2023-07-09T17:27:00,080] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:27:00,081] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:27:00,085] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 3 ms 
+[INFO ] [2023-07-09T17:29:40,989] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T17:29:41,018] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T17:44:11,705] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T17:44:12,027] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 15292 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T17:44:12,063] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T17:44:21,892] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T17:44:22,006] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 76 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T17:44:26,982] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T17:44:27,126] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T17:44:27,129] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:44:27,134] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T17:44:27,137] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T17:44:28,063] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T17:44:28,065] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15507 ms 
+[INFO ] [2023-07-09T17:44:31,387] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T17:44:33,333] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T17:44:33,664] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T17:44:33,671] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T17:44:33,851] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T17:44:36,061] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.370s) 
+[INFO ] [2023-07-09T17:44:36,118] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T17:44:36,124] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T17:44:48,041] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T17:44:48,685] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:44:48,929] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T17:44:49,156] [main] [Application] Started Application in 40.198 seconds (JVM running for 48.911) 
+[INFO ] [2023-07-09T17:45:15,928] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:45:15,933] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:45:15,945] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 8 ms 
+[INFO ] [2023-07-09T17:46:05,922] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T17:46:05,963] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T17:46:34,185] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T17:46:34,815] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 9540 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T17:46:34,902] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T17:46:45,302] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T17:46:45,407] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 70 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T17:46:51,447] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T17:46:51,589] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T17:46:51,592] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:46:51,598] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T17:46:51,601] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T17:46:52,601] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T17:46:52,602] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 16779 ms 
+[INFO ] [2023-07-09T17:46:56,928] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T17:46:59,142] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T17:46:59,386] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T17:46:59,399] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T17:46:59,483] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T17:47:01,344] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.243s) 
+[INFO ] [2023-07-09T17:47:01,438] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T17:47:01,445] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T17:47:13,682] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T17:47:14,116] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T17:47:14,353] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T17:47:14,538] [main] [Application] Started Application in 44.119 seconds (JVM running for 55.564) 
+[INFO ] [2023-07-09T17:47:41,423] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:47:41,425] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T17:47:41,533] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 107 ms 
+[INFO ] [2023-07-09T17:48:16,522] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T17:48:16,793] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T18:08:17,271] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T18:08:17,830] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 2228 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T18:08:17,870] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T18:08:28,352] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T18:08:28,466] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 78 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T18:08:34,978] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T18:08:35,120] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T18:08:35,125] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:08:35,130] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T18:08:35,133] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T18:08:36,481] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T18:08:36,482] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 18001 ms 
+[INFO ] [2023-07-09T18:08:43,279] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T18:08:46,581] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T18:08:46,737] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T18:08:46,746] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T18:08:46,850] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T18:08:48,683] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.412s) 
+[INFO ] [2023-07-09T18:08:48,855] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T18:08:48,863] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T18:09:01,977] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T18:09:02,594] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:09:02,881] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T18:09:03,332] [main] [Application] Started Application in 49.558 seconds (JVM running for 60.324) 
+[INFO ] [2023-07-09T18:12:02,275] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:12:02,279] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:12:02,290] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 9 ms 
+[WARN ] [2023-07-09T18:12:03,566] [http-nio-8080-exec-1] [DefaultHandlerExceptionResolver] Resolved [org.springframework.web.method.annotation.ModelAttributeMethodProcessor$1: org.springframework.validation.BeanPropertyBindingResult: 2 errors<EOL>Field error in object 'UUID' on field 'mostSigBits': rejected value [null]; codes [typeMismatch.UUID.mostSigBits,typeMismatch.mostSigBits,typeMismatch.long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [UUID.mostSigBits,mostSigBits]; arguments []; default message [mostSigBits]]; default message [Failed to convert value of type 'null' to required type 'long'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [long] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]<EOL>Field error in object 'UUID' on field 'leastSigBits': rejected value [null]; codes [typeMismatch.UUID.leastSigBits,typeMismatch.leastSigBits,typeMismatch.long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [UUID.leastSigBits,leastSigBits]; arguments []; default message [leastSigBits]]; default message [Failed to convert value of type 'null' to required type 'long'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [long] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]] 
+[INFO ] [2023-07-09T18:12:31,884] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T18:12:32,020] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T18:13:11,736] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T18:13:12,268] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 2364 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T18:13:12,332] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T18:13:22,382] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T18:13:22,485] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 70 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T18:13:28,678] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T18:13:28,835] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T18:13:28,837] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:13:28,843] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T18:13:28,845] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T18:13:30,100] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T18:13:30,108] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 17214 ms 
+[INFO ] [2023-07-09T18:13:35,167] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T18:13:38,242] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T18:13:38,379] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T18:13:38,384] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T18:13:38,474] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T18:13:40,431] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.679s) 
+[INFO ] [2023-07-09T18:13:40,573] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T18:13:40,577] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T18:13:50,513] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T18:13:50,859] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:13:51,087] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T18:13:51,401] [main] [Application] Started Application in 42.737 seconds (JVM running for 53.005) 
+[INFO ] [2023-07-09T18:25:40,925] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:25:40,963] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:25:40,978] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 15 ms 
+[WARN ] [2023-07-09T18:25:43,084] [http-nio-8080-exec-1] [DefaultHandlerExceptionResolver] Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'id' for method parameter type UUID is not present] 
+[INFO ] [2023-07-09T18:25:54,341] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T18:25:54,390] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T18:26:31,913] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T18:26:32,396] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 9404 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T18:26:32,446] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T18:26:42,405] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T18:26:42,504] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 66 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T18:26:48,759] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T18:26:48,942] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T18:26:48,945] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:26:48,953] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T18:26:48,956] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T18:26:50,776] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T18:26:50,783] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 17775 ms 
+[INFO ] [2023-07-09T18:26:56,376] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T18:26:58,956] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T18:26:59,374] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T18:26:59,388] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T18:26:59,519] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T18:27:01,774] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.315s) 
+[INFO ] [2023-07-09T18:27:01,837] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T18:27:01,842] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T18:27:13,442] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T18:27:14,082] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:27:14,424] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T18:27:14,816] [main] [Application] Started Application in 46.471 seconds (JVM running for 57.255) 
+[INFO ] [2023-07-09T18:32:15,149] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:32:15,151] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:32:15,160] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 9 ms 
+[ERROR] [2023-07-09T18:32:16,963] [http-nio-8080-exec-2] [[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [INSERT INTO interview_service.hero (id, "name", race, power_stats_id) VALUES(interview_service.uuid_generate_v4(), '?', '?', '?')]; The column index is out of range: 1, number of columns: 0.; nested exception is org.postgresql.util.PSQLException: The column index is out of range: 1, number of columns: 0.] with root cause 
+org.postgresql.util.PSQLException: The column index is out of range: 1, number of columns: 0.
+	at org.postgresql.core.v3.SimpleParameterList.bind(SimpleParameterList.java:70) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.SimpleParameterList.setStringParameter(SimpleParameterList.java:133) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.bindString(PgPreparedStatement.java:1064) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.setString(PgPreparedStatement.java:365) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.setString(PgPreparedStatement.java:351) ~[postgresql-42.3.4.jar:42.3.4]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setString(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:398) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:231) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:162) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:69) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:50) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:963) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl.save(HeroRepositoryImpl.java:54) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl$$FastClassBySpringCGLIB$$b1fab632.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl$$EnhancerBySpringCGLIB$$66b96dd4.save(<generated>) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroServiceImpl.teste(HeroServiceImpl.java:84) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.HeroController.teste(HeroController.java:34) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[INFO ] [2023-07-09T18:33:25,400] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T18:33:25,442] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T18:34:04,260] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T18:34:04,594] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 7716 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T18:34:04,624] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T18:34:13,459] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T18:34:13,578] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 87 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T18:34:18,732] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T18:34:18,884] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T18:34:18,887] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:34:18,892] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T18:34:18,894] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T18:34:19,800] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T18:34:19,802] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 14546 ms 
+[INFO ] [2023-07-09T18:34:23,901] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T18:34:25,759] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T18:34:26,152] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T18:34:26,162] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T18:34:26,273] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T18:34:28,499] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.311s) 
+[INFO ] [2023-07-09T18:34:28,663] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T18:34:28,671] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T18:34:39,285] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T18:34:39,757] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T18:34:40,119] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T18:34:40,285] [main] [Application] Started Application in 38.991 seconds (JVM running for 46.788) 
+[INFO ] [2023-07-09T18:50:03,796] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:50:03,797] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T18:50:03,810] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 4 ms 
+[INFO ] [2023-07-09T19:18:22,914] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T19:18:23,318] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T19:19:50,040] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T19:19:50,474] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 15964 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T19:19:50,520] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T19:20:00,243] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T19:20:00,355] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 73 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T19:20:05,780] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T19:20:05,910] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T19:20:05,912] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:20:05,918] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T19:20:05,920] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T19:20:06,839] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T19:20:06,841] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15893 ms 
+[INFO ] [2023-07-09T19:20:10,614] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T19:20:12,937] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T19:20:13,114] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T19:20:13,120] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T19:20:13,190] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T19:20:14,828] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.294s) 
+[INFO ] [2023-07-09T19:20:14,911] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T19:20:14,921] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T19:20:25,739] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T19:20:26,008] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:20:26,202] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T19:20:26,394] [main] [Application] Started Application in 39.462 seconds (JVM running for 48.267) 
+[INFO ] [2023-07-09T19:26:01,165] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:26:01,166] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:26:01,169] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 3 ms 
+[INFO ] [2023-07-09T19:26:53,845] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T19:26:53,865] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T19:27:17,601] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T19:27:18,127] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 1020 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T19:27:18,172] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T19:27:31,323] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T19:27:31,465] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 84 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T19:27:40,482] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T19:27:40,644] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T19:27:40,647] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:27:40,655] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T19:27:40,658] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T19:27:42,025] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T19:27:42,027] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 23278 ms 
+[INFO ] [2023-07-09T19:27:48,196] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T19:27:51,532] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T19:27:51,718] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T19:27:51,732] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T19:27:51,844] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T19:27:53,522] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.331s) 
+[INFO ] [2023-07-09T19:27:53,574] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T19:27:53,579] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T19:28:05,087] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T19:28:05,279] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:28:05,537] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T19:28:05,740] [main] [Application] Started Application in 51.523 seconds (JVM running for 63.424) 
+[INFO ] [2023-07-09T19:29:13,713] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:29:13,714] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:29:13,727] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 13 ms 
+[INFO ] [2023-07-09T19:29:40,508] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T19:29:40,527] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T19:30:30,345] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T19:30:30,837] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 840 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T19:30:30,909] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T19:30:41,364] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T19:30:41,478] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 74 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T19:30:48,186] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T19:30:48,347] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T19:30:48,351] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:30:48,358] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T19:30:48,361] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T19:30:49,457] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T19:30:49,461] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 17948 ms 
+[INFO ] [2023-07-09T19:30:54,334] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T19:30:56,274] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T19:30:56,637] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T19:30:56,650] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T19:30:56,935] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T19:30:58,789] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.364s) 
+[INFO ] [2023-07-09T19:30:58,903] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T19:30:58,910] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T19:31:11,309] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T19:31:11,677] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:31:11,973] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T19:31:12,207] [main] [Application] Started Application in 45.654 seconds (JVM running for 56.409) 
+[INFO ] [2023-07-09T19:35:28,146] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:35:28,150] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:35:28,167] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 16 ms 
+[INFO ] [2023-07-09T19:38:49,685] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T19:38:49,789] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T19:39:37,388] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T19:39:37,892] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 8472 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T19:39:37,937] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T19:39:47,660] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T19:39:47,770] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 84 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T19:39:53,268] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T19:39:53,392] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T19:39:53,393] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:39:53,398] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T19:39:53,400] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T19:39:54,302] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T19:39:54,306] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15742 ms 
+[INFO ] [2023-07-09T19:39:58,086] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T19:40:00,757] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T19:40:00,974] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T19:40:00,978] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T19:40:01,208] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T19:40:03,302] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.355s) 
+[INFO ] [2023-07-09T19:40:03,449] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T19:40:03,455] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T19:40:13,783] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T19:40:14,132] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T19:40:14,404] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T19:40:14,603] [main] [Application] Started Application in 39.993 seconds (JVM running for 48.93) 
+[INFO ] [2023-07-09T19:41:07,275] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:41:07,276] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T19:41:07,280] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 3 ms 
+[INFO ] [2023-07-09T20:10:49,246] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:10:49,304] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:16:21,401] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:16:21,901] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 16128 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:16:21,974] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:16:31,499] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:16:31,596] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 63 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:16:37,090] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:16:37,219] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:16:37,222] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:16:37,230] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:16:37,232] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:16:38,237] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:16:38,239] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15837 ms 
+[INFO ] [2023-07-09T20:16:42,789] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:16:44,881] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:16:45,066] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:16:45,082] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:16:45,305] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:16:47,417] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.449s) 
+[INFO ] [2023-07-09T20:16:47,566] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:16:47,572] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:16:59,692] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:17:00,456] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:17:00,765] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:17:00,989] [main] [Application] Started Application in 42.571 seconds (JVM running for 51.243) 
+[INFO ] [2023-07-09T20:17:15,081] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:17:15,082] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:17:15,090] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 7 ms 
+[WARN ] [2023-07-09T20:17:15,195] [http-nio-8080-exec-2] [DefaultHandlerExceptionResolver] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported] 
+[WARN ] [2023-07-09T20:17:25,601] [http-nio-8080-exec-3] [DefaultHandlerExceptionResolver] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' not supported] 
+[INFO ] [2023-07-09T20:17:51,606] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:17:51,624] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:19:18,975] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:19:19,324] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 9448 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:19:19,366] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:19:28,464] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:19:28,555] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 59 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:19:33,624] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:19:33,771] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:19:33,775] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:19:33,780] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:19:33,783] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:19:34,560] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:19:34,563] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 14740 ms 
+[INFO ] [2023-07-09T20:19:38,105] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:19:40,018] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:19:40,149] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:19:40,154] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:19:40,236] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:19:41,560] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.316s) 
+[INFO ] [2023-07-09T20:19:41,618] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:19:41,623] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:19:51,619] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:19:52,223] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:19:52,532] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:19:52,720] [main] [Application] Started Application in 36.592 seconds (JVM running for 44.418) 
+[INFO ] [2023-07-09T20:20:45,961] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:20:45,963] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:20:45,973] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 9 ms 
+[INFO ] [2023-07-09T20:21:45,581] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:21:45,617] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:24:37,790] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:24:38,130] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 3732 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:24:38,162] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:24:47,409] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:24:47,505] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 65 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:24:52,478] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:24:52,607] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:24:52,610] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:24:52,615] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:24:52,619] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:24:53,535] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:24:53,538] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 14947 ms 
+[INFO ] [2023-07-09T20:24:56,921] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:24:58,651] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:24:58,808] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:24:58,813] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:24:58,930] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:25:00,565] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.220s) 
+[INFO ] [2023-07-09T20:25:00,623] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:25:00,628] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:25:10,876] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:25:11,188] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:25:11,351] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:25:11,471] [main] [Application] Started Application in 36.658 seconds (JVM running for 44.286) 
+[INFO ] [2023-07-09T20:26:31,443] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:26:31,444] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:26:31,456] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 5 ms 
+[ERROR] [2023-07-09T20:26:33,163] [http-nio-8080-exec-2] [[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [UPDATE interview_service.hero SET "name"= ? , race= ?, enabled= ?, updated_at= now() WHERE id= ? ]; No value specified for parameter 4.; nested exception is org.postgresql.util.PSQLException: No value specified for parameter 4.] with root cause 
+org.postgresql.util.PSQLException: No value specified for parameter 4.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:284) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:339) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:135) ~[postgresql-42.3.4.jar:42.3.4]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl.editHero(HeroRepositoryImpl.java:88) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl$$FastClassBySpringCGLIB$$b1fab632.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.hero.impl.HeroRepositoryImpl$$EnhancerBySpringCGLIB$$23021a08.editHero(<generated>) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroServiceImpl.editHero(HeroServiceImpl.java:80) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.HeroController.editHero(HeroController.java:58) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[INFO ] [2023-07-09T20:29:08,670] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:29:08,761] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:29:59,657] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:30:00,140] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 11032 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:30:00,182] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:30:09,579] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:30:09,683] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 76 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:30:15,052] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:30:15,189] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:30:15,193] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:30:15,199] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:30:15,202] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:30:16,034] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:30:16,036] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15366 ms 
+[INFO ] [2023-07-09T20:30:19,420] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:30:21,693] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:30:21,833] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:30:21,838] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:30:22,010] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:30:23,913] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.314s) 
+[INFO ] [2023-07-09T20:30:23,970] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:30:23,978] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:30:37,003] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:30:37,549] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:30:37,731] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:30:37,984] [main] [Application] Started Application in 40.834 seconds (JVM running for 49.512) 
+[INFO ] [2023-07-09T20:33:45,303] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:33:45,304] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:33:45,316] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 11 ms 
+[INFO ] [2023-07-09T20:38:32,229] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:38:32,267] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:46:44,525] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:46:44,972] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 15916 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:46:45,023] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:46:54,505] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:46:54,613] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 77 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:46:59,596] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:46:59,736] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:46:59,739] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:46:59,744] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:46:59,746] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:47:00,711] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:47:00,713] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15188 ms 
+[INFO ] [2023-07-09T20:47:04,544] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:47:06,618] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:47:06,990] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:47:06,995] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:47:07,108] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:47:08,910] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.230s) 
+[INFO ] [2023-07-09T20:47:08,978] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:47:08,985] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:47:19,692] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:47:20,498] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:47:20,773] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:47:21,065] [main] [Application] Started Application in 39.523 seconds (JVM running for 48.113) 
+[INFO ] [2023-07-09T20:49:36,128] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:49:36,129] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:49:36,134] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 4 ms 
+[ERROR] [2023-07-09T20:49:37,743] [http-nio-8080-exec-1] [[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [UPDATE interview_service.power_stats SET strength= ?, agility= ?, dexterity= ?, intelligence= ? , created_at=now(), WHERE id= ? ]; nested exception is org.postgresql.util.PSQLException: ERROR: syntax error at or near "WHERE"
+  Position: 121] with root cause 
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "WHERE"
+  Position: 121
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167) ~[postgresql-42.3.4.jar:42.3.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:135) ~[postgresql-42.3.4.jar:42.3.4]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025) ~[spring-jdbc-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.powerstats.impl.PowerStatsRepositoryImpl.editHero(PowerStatsRepositoryImpl.java:41) ~[classes/:?]
+	at br.com.gubee.interview.core.features.powerstats.impl.PowerStatsRepositoryImpl$$FastClassBySpringCGLIB$$4d9f1a12.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.19.jar:5.3.19]
+	at br.com.gubee.interview.core.features.powerstats.impl.PowerStatsRepositoryImpl$$EnhancerBySpringCGLIB$$e74ca829.editHero(<generated>) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.impl.HeroServiceImpl.editHero(HeroServiceImpl.java:81) ~[classes/:?]
+	at br.com.gubee.interview.core.features.hero.HeroController.editHero(HeroController.java:58) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[INFO ] [2023-07-09T20:50:27,798] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:50:27,901] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:51:06,962] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:51:07,495] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 10524 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:51:07,582] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:51:16,718] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:51:16,843] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 91 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:51:22,240] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:51:22,359] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:51:22,363] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:51:22,371] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:51:22,374] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:51:23,302] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:51:23,312] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15241 ms 
+[INFO ] [2023-07-09T20:51:26,848] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:51:29,123] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:51:29,315] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:51:29,356] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:51:29,490] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:51:31,381] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.520s) 
+[INFO ] [2023-07-09T20:51:31,459] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:51:31,467] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:51:43,374] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:51:43,742] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:51:43,908] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:51:44,109] [main] [Application] Started Application in 40.063 seconds (JVM running for 48.719) 
+[INFO ] [2023-07-09T20:52:01,827] [http-nio-8080-exec-2] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:52:01,828] [http-nio-8080-exec-2] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:52:01,840] [http-nio-8080-exec-2] [DispatcherServlet] Completed initialization in 12 ms 
+[INFO ] [2023-07-09T20:53:45,311] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:53:45,330] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:54:25,112] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:54:25,597] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 5892 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:54:25,687] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:54:34,535] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:54:34,629] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 60 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:54:39,498] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:54:39,614] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:54:39,616] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:54:39,621] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:54:39,623] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:54:40,484] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:54:40,486] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 14339 ms 
+[INFO ] [2023-07-09T20:54:45,071] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:54:46,976] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:54:47,255] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:54:47,264] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:54:47,407] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:54:49,481] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.289s) 
+[INFO ] [2023-07-09T20:54:49,570] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:54:49,576] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:54:59,338] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:54:59,599] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:54:59,959] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:55:00,276] [main] [Application] Started Application in 38.285 seconds (JVM running for 45.93) 
+[INFO ] [2023-07-09T20:55:11,487] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:55:11,488] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T20:55:11,492] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 3 ms 
+[INFO ] [2023-07-09T20:55:47,739] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T20:55:47,773] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T20:56:24,320] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T20:56:24,647] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 17056 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T20:56:24,698] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T20:56:33,807] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T20:56:33,924] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 87 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T20:56:39,113] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T20:56:39,257] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T20:56:39,260] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:56:39,265] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T20:56:39,267] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T20:56:40,144] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T20:56:40,147] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 14935 ms 
+[INFO ] [2023-07-09T20:56:43,780] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T20:56:45,764] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T20:56:45,940] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T20:56:45,946] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T20:56:46,063] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T20:56:47,495] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.243s) 
+[INFO ] [2023-07-09T20:56:47,560] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T20:56:47,577] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T20:56:58,164] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T20:56:58,537] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T20:56:58,800] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T20:56:59,035] [main] [Application] Started Application in 37.736 seconds (JVM running for 46.268) 
+[INFO ] [2023-07-09T21:04:17,225] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T21:04:17,252] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T21:04:17,268] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 9 ms 
+[INFO ] [2023-07-09T21:07:52,600] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T21:07:52,631] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T21:08:29,878] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T21:08:30,273] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 3632 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T21:08:30,352] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T21:08:40,481] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T21:08:40,572] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 62 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T21:08:45,612] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T21:08:45,738] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T21:08:45,741] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T21:08:45,746] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T21:08:45,749] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T21:08:46,671] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T21:08:46,673] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 15416 ms 
+[INFO ] [2023-07-09T21:08:50,661] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T21:08:52,813] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T21:08:53,012] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T21:08:53,054] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T21:08:53,173] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T21:08:54,747] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.280s) 
+[INFO ] [2023-07-09T21:08:54,837] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T21:08:54,845] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T21:09:04,132] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T21:09:04,615] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T21:09:04,952] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T21:09:05,161] [main] [Application] Started Application in 38.049 seconds (JVM running for 46.736) 
+[INFO ] [2023-07-09T21:09:35,337] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T21:09:35,362] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T21:09:35,399] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 36 ms 
+[INFO ] [2023-07-09T21:17:49,285] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T21:17:49,361] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 
+[INFO ] [2023-07-09T23:15:45,984] [background-preinit] [Version] HV000001: Hibernate Validator 6.2.3.Final 
+[INFO ] [2023-07-09T23:15:46,981] [main] [Application] Starting Application using Java 18.0.2 on DESKTOP-1EAO4PB with PID 16084 (D:\Work\Testes\interview-pleno\core\target\classes started by Paulo in D:\Work\Testes\interview-pleno) 
+[INFO ] [2023-07-09T23:15:47,059] [main] [Application] No active profile set, falling back to 1 default profile: "default" 
+[INFO ] [2023-07-09T23:16:07,528] [main] [RepositoryConfigurationDelegate] Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[INFO ] [2023-07-09T23:16:07,653] [main] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 85 ms. Found 0 JDBC repository interfaces. 
+[INFO ] [2023-07-09T23:16:21,947] [main] [TomcatWebServer] Tomcat initialized with port(s): 8080 (http) 
+[INFO ] [2023-07-09T23:16:22,134] [main] [Http11NioProtocol] The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[INFO ] [2023-07-09T23:16:22,137] [main] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T23:16:22,145] [main] [StandardService] Starting service [Tomcat] 
+[INFO ] [2023-07-09T23:16:22,147] [main] [StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.62] 
+[INFO ] [2023-07-09T23:16:24,502] [main] [[/]] Initializing Spring embedded WebApplicationContext 
+[INFO ] [2023-07-09T23:16:24,504] [main] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 35513 ms 
+[INFO ] [2023-07-09T23:16:31,218] [main] [HikariDataSource] HikariPool-1 - Starting... 
+[INFO ] [2023-07-09T23:16:33,823] [main] [HikariDataSource] HikariPool-1 - Start completed. 
+[INFO ] [2023-07-09T23:16:34,002] [main] [VersionPrinter] Flyway Community Edition 8.0.5 by Redgate 
+[INFO ] [2023-07-09T23:16:34,029] [main] [BaseDatabaseType] Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 15.3) 
+[WARN ] [2023-07-09T23:16:34,212] [main] [Database] Flyway upgrade recommended: PostgreSQL 15.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 14. 
+[INFO ] [2023-07-09T23:16:36,201] [main] [DbValidate] Successfully validated 2 migrations (execution time 00:00.423s) 
+[INFO ] [2023-07-09T23:16:36,283] [main] [DbMigrate] Current version of schema "interview_service": 1.1 
+[INFO ] [2023-07-09T23:16:36,290] [main] [DbMigrate] Schema "interview_service" is up to date. No migration necessary. 
+[INFO ] [2023-07-09T23:16:50,586] [main] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator' 
+[INFO ] [2023-07-09T23:16:51,560] [main] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"] 
+[INFO ] [2023-07-09T23:16:52,159] [main] [TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path '' 
+[INFO ] [2023-07-09T23:16:52,724] [main] [Application] Started Application in 71.938 seconds (JVM running for 95.973) 
+[INFO ] [2023-07-09T23:18:31,112] [http-nio-8080-exec-1] [[/]] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T23:18:31,113] [http-nio-8080-exec-1] [DispatcherServlet] Initializing Servlet 'dispatcherServlet' 
+[INFO ] [2023-07-09T23:18:31,118] [http-nio-8080-exec-1] [DispatcherServlet] Completed initialization in 4 ms 
+[INFO ] [2023-07-09T23:21:57,956] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown initiated... 
+[INFO ] [2023-07-09T23:21:58,789] [SpringApplicationShutdownHook] [HikariDataSource] HikariPool-1 - Shutdown completed. 

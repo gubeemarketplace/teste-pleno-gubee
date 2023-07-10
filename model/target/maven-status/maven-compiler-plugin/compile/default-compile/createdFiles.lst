@@ -1,0 +1,6 @@
+br\com\gubee\interview\model\Hero.class
+br\com\gubee\interview\dto\ComparisonRequest.class
+br\com\gubee\interview\dto\HeroResponse.class
+br\com\gubee\interview\dto\HeroComparison.class
+br\com\gubee\interview\model\PowerStats.class
+br\com\gubee\interview\dto\PowerStatsResponse.class
