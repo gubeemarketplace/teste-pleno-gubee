@@ -1,23 +1,27 @@
-version: '3.4'
-services:
-  app:
-    image: pleno-gubee
-    ports:
-      - 8080:8080
-    depends_on:
-      - db
-    environment:
-      - DATABASE_HOST=db
-      - DATABASE_PORT=5432
-      - DATABASE_NAME=interview_service
-      - DATABASE_USER=gubee
-      - DATABASE_PASSWORD=gubee
+version: '3.8'
 
-  db:
-    image: postgres
-    ports:
-      - 5432:5432
+services:
+  postgres:
+    image: postgres:13-alpine
     environment:
-      - POSTGRES_DB=interview_service
-      - POSTGRES_USER=gubee
-      - POSTGRES_PASSWORD=gubee
+      POSTGRES_USER: gubee
+      POSTGRES_PASSWORD: gubee
+      POSTGRES_DB: dockerdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dockerdb
+      SPRING_DATASOURCE_USERNAME: gubee
+      SPRING_DATASOURCE_PASSWORD: gubee
+
+volumes:
+  postgres-data:
