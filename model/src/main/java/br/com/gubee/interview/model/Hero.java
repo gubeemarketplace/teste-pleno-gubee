@@ -39,5 +39,4 @@ public class Hero implements Serializable {
     private PowerStats powerStats;
 
 
-
 }

@@ -1,27 +1,23 @@
-version: '3.8'
-
+version: '3'
 services:
-  postgres:
-    image: postgres:13-alpine
-    environment:
-      POSTGRES_USER: gubee
-      POSTGRES_PASSWORD: gubee
-      POSTGRES_DB: dockerdb
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-
   app:
-    build: .
+    image: my-app-image
     ports:
-      - "8080:8080"
+      - 8080:8080
     depends_on:
-      - postgres
+      - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dockerdb
-      SPRING_DATASOURCE_USERNAME: gubee
-      SPRING_DATASOURCE_PASSWORD: gubee
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=interview_service
+      - DATABASE_USER=gubee
+      - DATABASE_PASSWORD=gubee
 
-volumes:
-  postgres-data:
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=interview_service
+      - POSTGRES_USER=gubee
+      - POSTGRES_PASSWORD=gubee
