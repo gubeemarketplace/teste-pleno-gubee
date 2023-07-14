@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    image: my-app-image
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=interview_service
+      - DATABASE_USER=gubee
+      - DATABASE_PASSWORD=gubee
+
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=interview_service
+      - POSTGRES_USER=gubee
+      - POSTGRES_PASSWORD=gubee
