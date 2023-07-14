@@ -64,5 +64,4 @@ Será considerado um plus os candidatos que entregarem:
 - Uso de BDD para escrever os testes de integração;
 - (Opcional) Monitoramento das máquinas.
 - Cache Distribuído:
-    - Utilizar algum mecanismo de cache distribuído na camada de banco de dados. 
- 
+    - Utilizar algum mecanismo de cache distribuído na camada de banco de dados.
