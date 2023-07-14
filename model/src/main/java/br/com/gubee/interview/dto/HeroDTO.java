@@ -11,10 +11,7 @@ import java.util.UUID;
 public class HeroDTO {
 
     private UUID id;
-
-
     private String name;
-
 
     @NotBlank(message="Preenchimento Obrigatório")
     private String race;
